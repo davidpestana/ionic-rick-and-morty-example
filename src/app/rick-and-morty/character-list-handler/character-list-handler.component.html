@@ -1,0 +1,10 @@
+<p>
+  character-list-handler works!
+</p>
+<div>
+  @for (character of characters; track character.id) {
+    <app-character-card [character]="character"></app-character-card>
+  } @empty {
+    no hay personajes de momento
+  }
+</div>

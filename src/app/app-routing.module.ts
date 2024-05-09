@@ -8,8 +8,20 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'character-collection',
     pathMatch: 'full'
+  },
+  {
+    path: 'character-collection',
+    loadChildren: () => import('./character-collection/character-collection.module').then( m => m.CharacterCollectionPageModule)
+  },
+  {
+    path: 'character',
+    loadChildren: () => import('./character/character.module').then( m => m.CharacterPageModule)
+  },
+  {
+    path: 'episode',
+    loadChildren: () => import('./episode/episode.module').then( m => m.EpisodePageModule)
   },
 ];
 
